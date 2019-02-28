@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "echarts": "^4.1.0",
+    "iview": "^3.2.2",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -33,7 +36,11 @@
       "plugin:vue/essential",
       "@vue/prettier"
     ],
-    "rules": {},
+    "rules": {
+      "vue/no-parsing-error": ["error", {
+        "x-invalid-end-tag": false
+      }]
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }

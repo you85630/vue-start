@@ -1,7 +1,7 @@
-const path = require("path");
+const path = require("path")
 
 function resolve(dir) {
-  return path.join(__dirname, dir);
+  return path.join(__dirname, dir)
 }
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
@@ -18,6 +18,6 @@ module.exports = {
       .set("src", resolve("src"))
       .set("views", resolve("src/views"))
       .set("assets", resolve("src/assets"))
-      .set("components", resolve("src/components"));
+      .set("components", resolve("src/components"))
   }
-};
+}

@@ -5,6 +5,7 @@
       <router-link to="/about">About</router-link>
     </div>
     <h1>This is an home page</h1>
+    <home-box></home-box>
   </div>
 </template>
 

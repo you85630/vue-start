@@ -15,6 +15,8 @@ import VueCookies from 'vue-cookies'
 // 引入UI
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
+// 重置全局样式
+import 'assets/css/reset.css'
 
 // 全局使用
 Vue.prototype.$echarts = echarts
@@ -40,5 +42,6 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  mounted () { document.dispatchEvent(new Event('render-event')) },
   render: h => h(App)
 }).$mount('#app')
